@@ -1,0 +1,10 @@
+[Unit]
+Description=Flask app service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/shvetsovdmitry/skypro-hosting
+ExecStart=/home/shvetsovdmitry/skypro-hosting/venv/bin/python run.py
+
+[Install]
+WantedBy=multi-user.target
