@@ -5,22 +5,41 @@ services:
     build: .
     ports:
       - 25000:25000
-    environment:
-      - DB_PASSWORD=db_password
-      - DB_USER=db_user
-      - DB_NAME=db_name
-      - DB_HOST=postgres_db
-    depends_on:
-      postgres_db:
-        condition: service_healthy
-  postgres_db:
-    image: postgres
-    environment:
-      - POSTGRES_PASSWORD=db_password
-      - POSTGRES_USER=db_user
-      - POSTGRES_DB=db_name
-    healthcheck:
-      test: /usr/bin/pg_isready
-      interval: 5s
-      timeout: 10s
-      retries: 120
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#    environment:
+#      - DB_PASSWORD=db_password
+#      - DB_USER=db_user
+#      - DB_NAME=db_name
+#      - DB_HOST=postgres_db
+#    depends_on:
+#      postgres_db:
+#        condition: service_healthy
+#  postgres_db:
+#    image: postgres
+#    environment:
+#      - POSTGRES_PASSWORD=db_password
+#      - POSTGRES_USER=db_user
+#      - POSTGRES_DB=db_name
+#    healthcheck:
+#      test: /usr/bin/pg_isready
+#      interval: 5s
+#      timeout: 10s
+#      retries: 120
